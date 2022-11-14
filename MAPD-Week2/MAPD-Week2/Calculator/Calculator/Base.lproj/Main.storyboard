@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CT6-vP-JwJ">
+                                <rect key="frame" x="20" y="202" width="374" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="77"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zf7-ZM-PpO">
+                                <rect key="frame" x="118" y="702" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="0">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.38224256385447392" green="0.36771626909127647" blue="0.65613162878787878" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lEX-ML-J3J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoR-gF-Ink">
+                                <rect key="frame" x="215" y="702" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="=">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Rr-Pp-g6Y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HFx-lG-Zjv">
+                                <rect key="frame" x="118" y="606" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="2">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gpg-lW-I56"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ho-pw-EHw">
+                                <rect key="frame" x="215" y="606" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="3">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zTN-ox-zJt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8TY-Ug-wXt">
+                                <rect key="frame" x="21" y="606" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="1">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99552162247474751" green="0.99552162247474751" blue="0.99552162247474751" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ACV-U9-9Gh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U28-He-2yi">
+                                <rect key="frame" x="118" y="510" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="5">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99473248106060608" green="0.99473248106060608" blue="0.99473248106060608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmo-bz-g3y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jj0-qZ-St3">
+                                <rect key="frame" x="21" y="510" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="4">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3mt-Tp-Szr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23U-TG-VhZ">
+                                <rect key="frame" x="215" y="510" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="6">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gpw-bk-fGd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybc-03-C9l">
+                                <rect key="frame" x="118" y="414" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="8">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txw-Eg-RU4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh1-FW-bcJ">
+                                <rect key="frame" x="21" y="414" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="7">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7S-Qd-Jzk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6O-5p-00Q">
+                                <rect key="frame" x="21" y="317" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="C">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.15618834056484915" green="0.06586007366381974" blue="0.31830018939393945" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8W-bY-onr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lO4-7a-flE">
+                                <rect key="frame" x="215" y="414" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="9">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75u-fs-xEt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IT9-PB-9Xn">
+                                <rect key="frame" x="312" y="606" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ey6-5g-jYN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBd-WO-q0I">
+                                <rect key="frame" x="312" y="510" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="x">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="APS-qa-xAO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0q-8O-VJQ">
+                                <rect key="frame" x="312" y="414" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="/">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5qG-ft-YBF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weo-6m-rcP">
+                                <rect key="frame" x="215" y="317" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+/-">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0jY-Ha-2rr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvt-Pm-KXj">
+                                <rect key="frame" x="118" y="317" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="DEL">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="29" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="txW-hn-uS8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8I-67-eUz">
+                                <rect key="frame" x="21" y="702" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content=".">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="numberButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sui-YS-uQp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSe-1t-8HL">
+                                <rect key="frame" x="312" y="317" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="%">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h6j-5y-Zt2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oUr-OE-8es">
+                                <rect key="frame" x="628" y="333" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+/-">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UsX-Re-OnX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfp-ob-vmr">
+                                <rect key="frame" x="179" y="115" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="DEL">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="29" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nkQ-37-8gl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8wR-CB-hu3">
+                                <rect key="frame" x="291" y="115" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="%">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqU-rd-TIB"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z57-YY-Zay">
+                                <rect key="frame" x="60" y="20" width="776" height="92"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="77"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                            </label>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVV-JQ-hVm">
+                                <rect key="frame" x="741" y="333" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="-">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0v-BM-zmJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhs-O0-Vee">
+                                <rect key="frame" x="515" y="333" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="0">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KTN-aC-Z3Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WU-FU-KHf">
+                                <rect key="frame" x="60" y="260" width="102" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="=">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="44" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Yz-EN-K1w"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNI-ZH-N4F">
+                                <rect key="frame" x="515" y="260" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="2">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AJh-t2-Taf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2VD-EE-E5p">
+                                <rect key="frame" x="628" y="260" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="3">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wsS-Na-VMr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXx-Zo-nfX">
+                                <rect key="frame" x="402" y="260" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="1">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99552162247474751" green="0.99552162247474751" blue="0.99552162247474751" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f6L-yr-NbK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yz-JR-cch">
+                                <rect key="frame" x="515" y="187" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="5">
+                                            <attributes>
+                                                <color key="NSColor" red="0.99473248106060608" green="0.99473248106060608" blue="0.99473248106060608" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2iH-5l-BtM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfM-wM-RnG">
+                                <rect key="frame" x="403" y="187" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="4">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DSk-39-aPA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCL-16-8v5">
+                                <rect key="frame" x="628" y="187" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="6">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xEN-Gv-EKk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbo-2t-hsn">
+                                <rect key="frame" x="515" y="115" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="8">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Py8-tt-ayZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCT-1r-41N">
+                                <rect key="frame" x="403" y="115" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="7">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZQE-Pu-t2m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ym3-lu-e0i">
+                                <rect key="frame" x="347" y="-69" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="j6W-0E-iss"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="C">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.1561883406" green="0.065860073660000004" blue="0.31830018939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATs-wz-58J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c98-X2-r9c">
+                                <rect key="frame" x="741" y="260" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQN-Ba-arA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70K-Ni-Cfx">
+                                <rect key="frame" x="741" y="187" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="x">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZVR-on-lV8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iN8-TQ-ExQ">
+                                <rect key="frame" x="741" y="115" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="/">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FPF-FY-qnX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3z-5K-B9d">
+                                <rect key="frame" x="541" y="-69" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Zp0-nh-xpH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="+/-">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OHQ-tO-IHh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="19" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afJ-ly-Me9">
+                                <rect key="frame" x="444" y="-69" width="100" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="wfz-nM-4cD"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="DEL">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="29" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBw-Pc-hbM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="71L-mc-e8b">
+                                <rect key="frame" x="403" y="333" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content=".">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZPM-XD-kGb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1c-K4-e5j">
+                                <rect key="frame" x="638" y="-69" width="100" height="60"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="%">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H4d-Ho-4Kt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lB-YX-fIq">
+                                <rect key="frame" x="628" y="115" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="9">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.3822425639" green="0.36771626909999999" blue="0.65613162879999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="numberButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCJ-Ni-Nmx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwx-Ft-UbQ">
+                                <rect key="frame" x="312" y="702" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="-">
+                                            <attributes>
+                                                <font key="NSFont" size="34" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="YES"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="NO"/>
+                                <connections>
+                                    <action selector="operatorButtonsTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iyc-gO-obp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Lm-Av-ZT2">
+                                <rect key="frame" x="60" y="115" width="102" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="C">
+                                            <attributes>
+                                                <font key="NSFont" size="44" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" red="0.1561883406" green="0.065860073660000004" blue="0.31830018939999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fm9-yf-EpD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kV-7t-xJn">
+                                <rect key="frame" x="179" y="187" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="x^2">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UD-Ab-aY9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xr7-pS-63z">
+                                <rect key="frame" x="291" y="187" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="sqrt">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r3q-yt-RKK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xr-7d-z87">
+                                <rect key="frame" x="179" y="260" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="sin">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udb-g4-UGh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQB-wH-UHQ">
+                                <rect key="frame" x="291" y="260" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="cos">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wwb-pB-ECH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="24" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygl-hD-iok">
+                                <rect key="frame" x="179" y="333" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="tan">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Avy-C8-Lyf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAU-3y-Dmi">
+                                <rect key="frame" x="291" y="333" width="95" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="large">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="log">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="32" name="ArialMT"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseBackgroundColor" red="0.15541467370000001" green="0.065830690179999998" blue="0.31613005049999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <variation key="heightClass=compact-widthClass=regular" hidden="NO"/>
+                                <variation key="heightClass=regular-widthClass=compact" hidden="YES"/>
+                                <connections>
+                                    <action selector="operatorButtonsTapL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVs-pl-hz6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.27058823529411763" green="0.23529411764705882" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" systemColor="tintColor"/>
+                        <constraints>
+                            <constraint firstItem="afJ-ly-Me9" firstAttribute="top" secondItem="N3z-5K-B9d" secondAttribute="top" id="8Zu-8U-gbg"/>
+                            <constraint firstItem="v1c-K4-e5j" firstAttribute="leading" secondItem="N3z-5K-B9d" secondAttribute="trailing" constant="-3" id="EsW-i3-PgO"/>
+                            <constraint firstItem="Ym3-lu-e0i" firstAttribute="top" secondItem="afJ-ly-Me9" secondAttribute="top" id="ODe-FZ-2N7"/>
+                            <constraint firstItem="afJ-ly-Me9" firstAttribute="leading" secondItem="Ym3-lu-e0i" secondAttribute="trailing" constant="-3" id="P7g-Eh-8ZI"/>
+                            <constraint firstItem="N3z-5K-B9d" firstAttribute="leading" secondItem="afJ-ly-Me9" secondAttribute="trailing" constant="-3" id="YLD-NT-lzM"/>
+                            <constraint firstItem="afJ-ly-Me9" firstAttribute="bottom" secondItem="N3z-5K-B9d" secondAttribute="bottom" id="bv9-uV-QXB"/>
+                            <constraint firstItem="Ym3-lu-e0i" firstAttribute="bottom" secondItem="afJ-ly-Me9" secondAttribute="bottom" id="er2-zf-lXj"/>
+                            <constraint firstItem="Ym3-lu-e0i" firstAttribute="baseline" secondItem="v1c-K4-e5j" secondAttribute="baseline" id="nPZ-kT-F0d"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="CT6-vP-JwJ"/>
+                                <exclude reference="zf7-ZM-PpO"/>
+                                <exclude reference="SoR-gF-Ink"/>
+                                <exclude reference="HFx-lG-Zjv"/>
+                                <exclude reference="9ho-pw-EHw"/>
+                                <exclude reference="8TY-Ug-wXt"/>
+                                <exclude reference="U28-He-2yi"/>
+                                <exclude reference="Jj0-qZ-St3"/>
+                                <exclude reference="23U-TG-VhZ"/>
+                                <exclude reference="ybc-03-C9l"/>
+                                <exclude reference="Vh1-FW-bcJ"/>
+                                <exclude reference="D6O-5p-00Q"/>
+                                <exclude reference="lO4-7a-flE"/>
+                                <exclude reference="IT9-PB-9Xn"/>
+                                <exclude reference="bBd-WO-q0I"/>
+                                <exclude reference="H0q-8O-VJQ"/>
+                                <exclude reference="weo-6m-rcP"/>
+                                <exclude reference="bvt-Pm-KXj"/>
+                                <exclude reference="k8I-67-eUz"/>
+                                <exclude reference="uSe-1t-8HL"/>
+                                <exclude reference="oUr-OE-8es"/>
+                                <exclude reference="vfp-ob-vmr"/>
+                                <exclude reference="8wR-CB-hu3"/>
+                                <exclude reference="Z57-YY-Zay"/>
+                                <exclude reference="oVV-JQ-hVm"/>
+                                <exclude reference="Lhs-O0-Vee"/>
+                                <exclude reference="1WU-FU-KHf"/>
+                                <exclude reference="kNI-ZH-N4F"/>
+                                <exclude reference="2VD-EE-E5p"/>
+                                <exclude reference="BXx-Zo-nfX"/>
+                                <exclude reference="6Yz-JR-cch"/>
+                                <exclude reference="GfM-wM-RnG"/>
+                                <exclude reference="tCL-16-8v5"/>
+                                <exclude reference="pbo-2t-hsn"/>
+                                <exclude reference="HCT-1r-41N"/>
+                                <exclude reference="c98-X2-r9c"/>
+                                <exclude reference="70K-Ni-Cfx"/>
+                                <exclude reference="iN8-TQ-ExQ"/>
+                                <exclude reference="71L-mc-e8b"/>
+                                <exclude reference="1lB-YX-fIq"/>
+                                <exclude reference="xwx-Ft-UbQ"/>
+                                <exclude reference="6Lm-Av-ZT2"/>
+                                <exclude reference="5kV-7t-xJn"/>
+                                <exclude reference="Xr7-pS-63z"/>
+                                <exclude reference="3xr-7d-z87"/>
+                                <exclude reference="aQB-wH-UHQ"/>
+                                <exclude reference="Ygl-hD-iok"/>
+                                <exclude reference="uAU-3y-Dmi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="oUr-OE-8es"/>
+                                <include reference="vfp-ob-vmr"/>
+                                <include reference="8wR-CB-hu3"/>
+                                <include reference="Z57-YY-Zay"/>
+                                <include reference="oVV-JQ-hVm"/>
+                                <include reference="Lhs-O0-Vee"/>
+                                <include reference="1WU-FU-KHf"/>
+                                <include reference="kNI-ZH-N4F"/>
+                                <include reference="2VD-EE-E5p"/>
+                                <include reference="BXx-Zo-nfX"/>
+                                <include reference="6Yz-JR-cch"/>
+                                <include reference="GfM-wM-RnG"/>
+                                <include reference="tCL-16-8v5"/>
+                                <include reference="pbo-2t-hsn"/>
+                                <include reference="HCT-1r-41N"/>
+                                <include reference="c98-X2-r9c"/>
+                                <include reference="70K-Ni-Cfx"/>
+                                <include reference="iN8-TQ-ExQ"/>
+                                <include reference="71L-mc-e8b"/>
+                                <include reference="1lB-YX-fIq"/>
+                                <include reference="6Lm-Av-ZT2"/>
+                                <include reference="5kV-7t-xJn"/>
+                                <include reference="Xr7-pS-63z"/>
+                                <include reference="3xr-7d-z87"/>
+                                <include reference="aQB-wH-UHQ"/>
+                                <include reference="Ygl-hD-iok"/>
+                                <include reference="uAU-3y-Dmi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="CT6-vP-JwJ"/>
+                                <include reference="zf7-ZM-PpO"/>
+                                <include reference="SoR-gF-Ink"/>
+                                <include reference="HFx-lG-Zjv"/>
+                                <include reference="9ho-pw-EHw"/>
+                                <include reference="8TY-Ug-wXt"/>
+                                <include reference="U28-He-2yi"/>
+                                <include reference="Jj0-qZ-St3"/>
+                                <include reference="23U-TG-VhZ"/>
+                                <include reference="ybc-03-C9l"/>
+                                <include reference="Vh1-FW-bcJ"/>
+                                <include reference="D6O-5p-00Q"/>
+                                <include reference="lO4-7a-flE"/>
+                                <include reference="IT9-PB-9Xn"/>
+                                <include reference="bBd-WO-q0I"/>
+                                <include reference="H0q-8O-VJQ"/>
+                                <include reference="weo-6m-rcP"/>
+                                <include reference="bvt-Pm-KXj"/>
+                                <include reference="k8I-67-eUz"/>
+                                <include reference="uSe-1t-8HL"/>
+                                <include reference="xwx-Ft-UbQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="calculatorResults" destination="CT6-vP-JwJ" id="w4C-Wi-2d8"/>
+                        <outlet property="calculatorResultsL" destination="Z57-YY-Zay" id="AgC-2t-dLG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.741071428571427" y="79.710144927536234"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
